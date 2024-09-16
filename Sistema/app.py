@@ -13,8 +13,8 @@ with open('./dados/config.json', 'r') as f:
 
 # Envio de mensagens:
 def enviarMensagem(numero, cliente, data, preco, conteudo):
-    image_url = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fhightouch.com%2Fblog%2Ffacebook-capi&psig=AOvVaw0Sc11rYxvnk56lEURSKrsv&ust=1725800395749000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJiz3NDxsIgDFQAAAAAdAAAAABAE"
-    download_link = "https://drive.google.com/uc?export=download&id=1AO8YR8ahBP8oB0-CrHALRt-8nP2CPRES"
+    image_url = ""
+    download_link = ""
 
     url = f"https://graph.facebook.com/{infos['VERSION']}/{infos['PHONE_NUMBER_ID']}/messages"
     headers = {
@@ -53,7 +53,7 @@ def enviarMensagem(numero, cliente, data, preco, conteudo):
                             "parameters": [
                                 {
                                     "type": "payload",
-                                    "payload": "chave_pix"  # URL do botão personalizado
+                                    "payload": "chave_pix"  
                                 }
                             ]
                          },
